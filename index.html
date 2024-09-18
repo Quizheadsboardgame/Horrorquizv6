@@ -3,12 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Center Image</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Embed with Background</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-image: url('https://i.imgur.com/i7WWrOf.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .embed-container {
+            position: relative;
+            width: 40vw;
+            height: 40vw; /* 1:1 aspect ratio */
+            box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .embed-container iframe {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            border: none;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <img src="https://i.imgur.com/vWr6DI7.png" alt="Center Image">
+    <div class="embed-container">
+        <iframe loading="lazy"
+            src="https://www.canva.com/design/DAGPyVHP1Bo/35lRzO5zy0Ztft_4HO5MtA/view?embed"
+            allowfullscreen="allowfullscreen" allow="fullscreen">
+        </iframe>
     </div>
 </body>
 </html>
