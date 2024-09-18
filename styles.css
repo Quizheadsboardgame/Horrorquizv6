@@ -7,10 +7,13 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Full viewport height */
+    height: 40vh; /* 40% of viewport height */
+    width: 100%; /* Full width */
 }
 
 img {
+    max-height: 100%;
     max-width: 100%;
     height: auto;
+    width: auto;
 }
